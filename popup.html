@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .header h1 {
+      margin: 0;
+      font-size: 18px;
+      color: #2c3e50;
+      font-weight: 600;
+    }
+    
+    .header p {
+      margin: 5px 0 0 0;
+      font-size: 12px;
+      color: #7f8c8d;
+    }
+    
+    .feature-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #ecf0f1;
+    }
+    
+    .feature-item:last-child {
+      border-bottom: none;
+    }
+    
+    .feature-info {
+      flex: 1;
+    }
+    
+    .feature-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: #2c3e50;
+      margin: 0 0 4px 0;
+    }
+    
+    .feature-desc {
+      font-size: 12px;
+      color: #7f8c8d;
+      margin: 0;
+      line-height: 1.4;
+    }
+    
+    .toggle {
+      position: relative;
+      width: 44px;
+      height: 24px;
+      background: #bdc3c7;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    
+    .toggle.active {
+      background: #3498db;
+    }
+    
+    .toggle::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+    
+    .toggle.active::after {
+      transform: translateX(20px);
+    }
+    
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      padding-top: 15px;
+      border-top: 1px solid #ecf0f1;
+    }
+    
+    .footer a {
+      color: #3498db;
+      text-decoration: none;
+      font-size: 12px;
+    }
+    
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    
+    .status {
+      font-size: 11px;
+      color: #27ae60;
+      margin-top: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>NIU Web Helper</h1>
+    <p>宜蘭大學 一些網站的 優化工具</p>
+  </div>
+  
+  <div class="feature-item">
+    <div class="feature-info">
+      <div class="feature-title">Moodle 園區自動勾選聲明</div>
+      <div class="feature-desc">自動勾選智慧財產權聲明</div>
+    </div>
+    <div class="toggle" id="autoCheckToggle"></div>
+  </div>
+  
+  <div class="feature-item">
+    <div class="feature-info">
+      <div class="feature-title">Moodle 園區作業高亮</div>
+      <div class="feature-desc">在課程頁面高亮顯示作業</div>
+    </div>
+    <div class="toggle" id="highlightToggle"></div>
+  </div>
+  
+  <div class="feature-item">
+    <div class="feature-info">
+      <div class="feature-title">Moodle 園區自動上傳</div>
+      <div class="feature-desc">點擊上傳區域後自動開啟檔案選擇</div>
+    </div>
+    <div class="toggle" id="autoUploadToggle"></div>
+  </div>
+  
+  <div class="footer">
+    <a href="https://blog.qian30.net" target="_blank">作者網站</a>
+    <div class="status" id="status"></div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

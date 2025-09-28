@@ -1,0 +1,48 @@
+{
+  "name": "niu-moodle-helper",
+  "version": "1.1.0",
+  "description": "宜蘭大學 Moodle 優化插件 - 自動勾選聲明與作業高亮",
+  "author": "CHIEN https://blog.qian30.net",
+  "homepage": "https://github.com/chien/Better-NIU-Moodle",
+  "license": "MIT",
+  
+  "scripts": {
+    "build": "node build.js",
+    "build:chrome": "node build.js chrome",
+    "build:firefox": "node build.js firefox",
+    "clean": "rm -rf dist/",
+    "package:chrome": "npm run build:chrome && cd dist/chrome && zip -r ../niu-moodle-helper-chrome.zip .",
+    "package:firefox": "npm run build:firefox && cd dist/firefox && zip -r ../niu-moodle-helper-firefox.zip .",
+    "package": "npm run package:chrome && npm run package:firefox"
+  },
+  
+  "keywords": [
+    "chrome-extension",
+    "firefox-addon",
+    "moodle",
+    "niu",
+    "宜蘭大學",
+    "自動化",
+    "userscript"
+  ],
+  
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chien/Better-NIU-Moodle.git"
+  },
+  
+  "bugs": {
+    "url": "https://github.com/chien/Better-NIU-Moodle/issues"
+  },
+  
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  
+  "devDependencies": {},
+  
+  "browserslist": [
+    "Chrome >= 88",
+    "Firefox >= 78"
+  ]
+}
